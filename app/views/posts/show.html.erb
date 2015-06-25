@@ -1,0 +1,12 @@
+<h1><%= @post.title %></h1>
+
+<h3>Written By: <%= @post.bru_name %></h3>
+
+<p>
+	<%= @post.body %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Delete', post_path(@post), method: :delete, data:
+{ confirm: "Are you sure you want to delete #{@post.title}?"} %> |
+<%= link_to 'Back', posts_path %>
